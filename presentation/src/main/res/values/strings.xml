@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Rick and Morty</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="try_again">Попробовать снова</string>
+    <string name="load_error">Ошибка загрузки</string>
+    <string name="title_for_list_of_characters">Characters</string>
+</resources>

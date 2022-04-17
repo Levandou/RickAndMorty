@@ -1,0 +1,21 @@
+name: Android-Actions-Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-java@v1
+        with: {java-version: 11}
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Detekt
+        run: ./gradlew detekt
+
+      - name: Ktlint
+        run: ./gradlew ktlintCheck
