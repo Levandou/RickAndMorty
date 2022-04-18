@@ -1,21 +1,21 @@
-package com.velagissellint.presentation.ui
+package com.velagissellint.presentation.list_of_characters
 
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.RecyclerView
 import com.velagissellint.presentation.R
 import com.velagissellint.presentation.ViewModelFactory
 import com.velagissellint.presentation.containersDi.ContainerAppContainer
-import com.velagissellint.presentation.ui.adapters.CharactersListAdapter
-import com.velagissellint.presentation.ui.adapters.CharactersListLoadStateAdapter
+import com.velagissellint.presentation.list_of_characters.adapters.CharactersListAdapter
+import com.velagissellint.presentation.list_of_characters.adapters.CharactersListLoadStateAdapter
 import javax.inject.Inject
 
 class ListOfCharactersFragment : Fragment() {
@@ -23,6 +23,7 @@ class ListOfCharactersFragment : Fragment() {
     lateinit var factory: ViewModelFactory
     lateinit var listOfCharactersViewModel: ListOfCharactersViewModel
 
+    private lateinit var navController: NavController
     private lateinit var adapter: CharactersListAdapter
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -37,12 +38,7 @@ class ListOfCharactersFragment : Fragment() {
     ): View? {
         (activity as AppCompatActivity?)?.supportActionBar?.title =
             getString(R.string.title_for_list_of_characters)
-        val callback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                findNavController().popBackStack()
-            }
-        }
-        activity?.onBackPressedDispatcher?.addCallback(this, callback)
+        navController = NavHostFragment.findNavController(this)
         listOfCharactersViewModel =
             ViewModelProvider(this, factory).get(ListOfCharactersViewModel::class.java)
         return inflater.inflate(R.layout.fragment_list_of_characters, container, false)
@@ -57,9 +53,14 @@ class ListOfCharactersFragment : Fragment() {
     private fun setupRecyclerView(view: View) {
         val rv = view.findViewById<RecyclerView>(R.id.rv_characters)
         rv.addItemDecoration(DividerItemDecoration(activity?.applicationContext))
-        adapter = CharactersListAdapter { url, imageView ->
+        adapter = CharactersListAdapter({ url, imageView ->
             listOfCharactersViewModel.loadImage(url, imageView)
-        }
+        }, { id ->
+            val action =
+                ListOfCharactersFragmentDirections
+                    .actionListOfCharactersFragmentToDetailedCharacterFragment(id)
+            navController.navigate(action)
+        })
         rv.adapter = adapter.withLoadStateFooter(CharactersListLoadStateAdapter { adapter.retry() })
     }
 

@@ -1,7 +1,7 @@
-package com.velagissellint.presentation.ui
+package com.velagissellint.presentation.list_of_characters
 
 import androidx.recyclerview.widget.DiffUtil
-import com.velagissellint.domain.pojo.Result
+import com.velagissellint.domain.models.Result
 
 class CharactersListDiffCallback : DiffUtil.ItemCallback<Result>() {
     override fun areItemsTheSame(

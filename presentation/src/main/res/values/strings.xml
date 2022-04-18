@@ -4,4 +4,5 @@
     <string name="try_again">Попробовать снова</string>
     <string name="load_error">Ошибка загрузки</string>
     <string name="title_for_list_of_characters">Characters</string>
+    <string name="title_for_detailed_character">Detailed description</string>
 </resources>

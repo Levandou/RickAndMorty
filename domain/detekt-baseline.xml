@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>NewLineAtEndOfFile:Character.kt$com.velagissellint.domain.models.Character.kt</ID>
+    <ID>NewLineAtEndOfFile:DetailedCharacterRepository.kt$com.velagissellint.domain.useCases.character.DetailedCharacterRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:GetDetailedCharacterUseCase.kt$com.velagissellint.domain.useCases.character.GetDetailedCharacterUseCase.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>

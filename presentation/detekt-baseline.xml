@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>NewLineAtEndOfFile:DetailedCharacterContainer.kt$com.velagissellint.presentation.containersDi.DetailedCharacterContainer.kt</ID>
+    <ID>NewLineAtEndOfFile:DetailedCharacterFragment.kt$com.velagissellint.presentation.detailed_character.DetailedCharacterFragment.kt</ID>
+    <ID>NewLineAtEndOfFile:DetailedCharacterViewModel.kt$com.velagissellint.presentation.detailed_character.DetailedCharacterViewModel.kt</ID>
+    <ID>PackageNaming:CharactersLIstViewHolder.kt$package com.velagissellint.presentation.list_of_characters</ID>
+    <ID>PackageNaming:CharactersListAdapter.kt$package com.velagissellint.presentation.list_of_characters.adapters</ID>
+    <ID>PackageNaming:CharactersListDiffCallback.kt$package com.velagissellint.presentation.list_of_characters</ID>
+    <ID>PackageNaming:CharactersListLoadStateAdapter.kt$package com.velagissellint.presentation.list_of_characters.adapters</ID>
+    <ID>PackageNaming:DetailedCharacterFragment.kt$package com.velagissellint.presentation.detailed_character</ID>
+    <ID>PackageNaming:DetailedCharacterViewModel.kt$package com.velagissellint.presentation.detailed_character</ID>
+    <ID>PackageNaming:DividerItemDecoration.kt$package com.velagissellint.presentation.list_of_characters</ID>
+    <ID>PackageNaming:ListOfCharactersFragment.kt$package com.velagissellint.presentation.list_of_characters</ID>
+    <ID>PackageNaming:ListOfCharactersViewModel.kt$package com.velagissellint.presentation.list_of_characters</ID>
+    <ID>TooGenericExceptionThrown:DetailedCharacterFragment.kt$DetailedCharacterFragment$throw RuntimeException("FragmentDetailedCharacterBinding == null")</ID>
+  </CurrentIssues>
+</SmellBaseline>
