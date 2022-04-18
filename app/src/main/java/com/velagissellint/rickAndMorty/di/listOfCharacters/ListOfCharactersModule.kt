@@ -1,7 +1,7 @@
 package com.velagissellint.rickAndMorty.di.listOfCharacters
 
 import androidx.lifecycle.ViewModel
-import com.velagissellint.presentation.ui.ListOfCharactersViewModel
+import com.velagissellint.presentation.list_of_characters.ListOfCharactersViewModel
 import com.velagissellint.rickAndMorty.ViewModelKey
 import com.velagissellint.rickAndMorty.scopes.ListOfCharactersScope
 import dagger.Binds

@@ -6,7 +6,20 @@
     app:startDestination="@id/listOfCharactersFragment">
     <fragment
         android:id="@+id/listOfCharactersFragment"
-        android:name="com.velagissellint.presentation.ui.ListOfCharactersFragment"
+        android:name="com.velagissellint.presentation.list_of_characters.ListOfCharactersFragment"
         android:label="fragment_list_of_characters"
-        tools:layout="@layout/fragment_list_of_characters" />
+        tools:layout="@layout/fragment_list_of_characters" >
+        <action
+            android:id="@+id/action_listOfCharactersFragment_to_detailedCharacterFragment"
+            app:destination="@id/detailedCharacterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedCharacterFragment"
+        android:name="com.velagissellint.presentation.detailed_character.DetailedCharacterFragment"
+        android:label="fragment_detailed_character"
+        tools:layout="@layout/fragment_detailed_character" >
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
 </navigation>

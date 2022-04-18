@@ -1,8 +1,4 @@
-package com.velagissellint.domain.pojo
-
-data class Root(
-    val results: List<Result>
-)
+package com.velagissellint.domain.models
 
 data class Result(
     val id: Long,

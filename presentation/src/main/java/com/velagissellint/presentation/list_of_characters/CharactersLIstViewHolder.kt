@@ -1,4 +1,4 @@
-package com.velagissellint.presentation.ui
+package com.velagissellint.presentation.list_of_characters
 
 import android.view.View
 import android.widget.ImageView

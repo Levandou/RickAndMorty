@@ -1,4 +1,4 @@
-package com.velagissellint.presentation.ui.adapters
+package com.velagissellint.presentation.list_of_characters.adapters
 
 import android.view.LayoutInflater
 import android.view.View

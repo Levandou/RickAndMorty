@@ -1,4 +1,4 @@
-package com.velagissellint.brave.di.app
+package com.velagissellint.rickAndMorty.di.app
 
 import android.app.Application
 import android.content.Context
